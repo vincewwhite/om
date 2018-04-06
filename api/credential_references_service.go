@@ -12,14 +12,12 @@ type CredentialReferencesOutput struct {
 }
 
 type CredentialReferencesService struct {
-	client   httpClient
-	progress progress
+	client httpClient
 }
 
-func NewCredentialReferencesService(client httpClient, progress progress) CredentialReferencesService {
+func NewCredentialReferencesService(client httpClient) CredentialReferencesService {
 	return CredentialReferencesService{
-		client:   client,
-		progress: progress,
+		client: client,
 	}
 }
 
